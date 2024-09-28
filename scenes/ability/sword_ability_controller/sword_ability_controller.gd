@@ -26,7 +26,8 @@ func on_timer_timeout():
 	)
 	if enemies.size() == 0:
 		return
-	
+		
+	# 排序选择距离玩家最近的敌人
 	enemies.sort_custom(func(a: Node2D, b: Node2D): 
 		var a_dist = a.global_position.distance_squared_to(player.global_position)
 		var b_dist = b.global_position.distance_squared_to(player.global_position)
@@ -34,12 +35,14 @@ func on_timer_timeout():
 	)
 	var target_enemy = enemies[0] as Node2D
 	
+	# 实例化
 	var sword_instance = sword_ability.instantiate() as SwordAbility
 	var foreground_layer = get_tree().get_first_node_in_group("foreground_layer")
 	foreground_layer.add_child(sword_instance)
 	sword_instance.global_position = target_enemy.global_position
 	sword_instance.hitbox_component.damage = damage
 	
+	# 调整实例方向
 	var sword_direction = player.global_position - target_enemy.global_position
 	sword_instance.rotation = sword_direction.angle()
 	
