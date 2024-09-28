@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0pdj2du15piq"]
+
+[ext_resource type="Script" path="res://scenes/ui/arena_time_ui.gd" id="1_otlhu"]
+[ext_resource type="FontFile" uid="uid://bhfq3681dn1g6" path="res://assets/fonts/fusion-pixel-10px-proportional-zh_hans.ttf" id="2_cigs7"]
+
+[node name="ArenaTimeUI" type="CanvasLayer"]
+script = ExtResource("1_otlhu")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 8
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_cigs7")
+theme_override_font_sizes/font_size = 20
+text = "test"
