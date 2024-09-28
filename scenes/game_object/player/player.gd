@@ -42,7 +42,7 @@ func check_deal_damage():
 	damage_interval_timer.start()
 	health_component.damage(1)
 	
-	print("current_health: " + str(health_component.current_health))
+	print("玩家当前血量: " + str(health_component.current_health))
 	
 	
 func update_health_display():
