@@ -5,7 +5,7 @@ extends Node
 @onready var timer = $Timer
 
 var damage = 10
-var spawn_interval_time = 2
+var spawn_interval_time = 3.5
 
 func _ready():
 	timer.timeout.connect(on_timer_timeout)	

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="AbilityAcquire" load_steps=3 format=3 uid="uid://cybweayr8q7qt"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability_acquire.gd" id="1_m8wk6"]
+[ext_resource type="PackedScene" uid="uid://brbtp4w5iw57s" path="res://scenes/ability/axe_ability_controller/axe_ability_controller.tscn" id="1_qgswb"]
+
+[resource]
+script = ExtResource("1_m8wk6")
+ability_controller_scene = ExtResource("1_qgswb")
+id = "axe_acquire"
+max_quantity = 1
+name = "旋风飞斧"
+description = "不断掷出旋转的飞斧攻击敌人。"
