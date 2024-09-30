@@ -3,11 +3,15 @@ extends Node
 const SPAWN_RADIUS = 375
 const INIT_SPWAN_INTERVAL_TIME = 1
 const DIFFICULTY_SPWAN_INTERVAL_TIME_OFFSET = 0.01
+const WIZARD_SPAWN_DIFFICULTY = 6
 
 @export var basic_enemy_scene: PackedScene
+@export var wizard_enemy_scene: PackedScene
 @export var arena_timer_manager: Node
 
 @onready var timer = $Timer
+
+var enemy_table = WeightedTable.new()
 
 
 func _ready():
@@ -15,6 +19,8 @@ func _ready():
 	timer.start()
 	timer.timeout.connect(on_timer_timeout)
 	arena_timer_manager.difficulty_updated.connect(on_difficulty_updated)
+	
+	enemy_table.add_item(basic_enemy_scene, 10)
 
 
 func get_spawn_position(player: Node2D):
@@ -46,7 +52,8 @@ func on_timer_timeout():
 	var spawn_position = get_spawn_position(player)
 	var entities_layer = get_tree().get_first_node_in_group("entities_layer")
 	
-	var enemy_instance = basic_enemy_scene.instantiate() as Node2D
+	var enemy_scene = enemy_table.pick_item()
+	var enemy_instance = enemy_scene.instantiate() as Node2D
 	entities_layer.add_child(enemy_instance)
 	enemy_instance.global_position = spawn_position
 
@@ -55,4 +62,9 @@ func on_difficulty_updated(current_difficulty: int):
 	var time_offset = current_difficulty * DIFFICULTY_SPWAN_INTERVAL_TIME_OFFSET
 	timer.wait_time = INIT_SPWAN_INTERVAL_TIME - min(time_offset, 0.9)
 	print("敌人生成时间更新: " + str(timer.wait_time))
+	
+	# TODO
+	if current_difficulty == WIZARD_SPAWN_DIFFICULTY:
+		enemy_table.add_item(wizard_enemy_scene, 20)
+		print("敌人列表更新: " + str(enemy_table))
 	

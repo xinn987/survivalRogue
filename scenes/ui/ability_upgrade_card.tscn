@@ -1,8 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://bh6hf6sfgw276"]
+[gd_scene load_steps=2 format=3 uid="uid://bh6hf6sfgw276"]
 
 [ext_resource type="Script" path="res://scenes/ui/ability_upgrade_card.gd" id="1_8pivr"]
-[ext_resource type="FontFile" uid="uid://bhfq3681dn1g6" path="res://assets/fonts/fusion-pixel-10px-proportional-zh_hans.ttf" id="1_fg60n"]
-[ext_resource type="FontFile" uid="uid://cos3g4or5uymn" path="res://assets/fonts/fusion-pixel-12px-proportional-zh_hans.ttf" id="2_nondv"]
 
 [node name="AbilityUpgradeCard" type="PanelContainer"]
 custom_minimum_size = Vector2(120, 140)
@@ -13,13 +11,9 @@ layout_mode = 2
 
 [node name="NameLabel" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_fg60n")
-theme_override_font_sizes/font_size = 20
 text = "测试名称"
 
 [node name="DescriptionLabel" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_nondv")
-theme_override_font_sizes/font_size = 12
 text = "测试描述"
 autowrap_mode = 3

@@ -8,9 +8,11 @@ var damage = 10
 var spawn_interval_time = 3.5
 
 func _ready():
-	timer.timeout.connect(on_timer_timeout)	
+	timer.timeout.connect(on_timer_timeout)
 	timer.wait_time = spawn_interval_time
 	timer.start()
+	# 初始释放一次
+	on_timer_timeout()
 	
 	
 func on_timer_timeout():

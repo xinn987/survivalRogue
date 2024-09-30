@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cos3g4or5uymn"
-path="res://.godot/imported/fusion-pixel-12px-proportional-zh_hans.ttf-66f66ea67972b4eabc57d162381e3e87.fontdata"
+uid="uid://x3v1n1dxfueh"
+path="res://.godot/imported/Rockboxcond12.ttf-61a0d80becf129e5eb10d2864280ff14.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/fusion-pixel-12px-proportional-zh_hans.ttf"
-dest_files=["res://.godot/imported/fusion-pixel-12px-proportional-zh_hans.ttf-66f66ea67972b4eabc57d162381e3e87.fontdata"]
+source_file="res://assets/fonts/Rockboxcond12.ttf"
+dest_files=["res://.godot/imported/Rockboxcond12.ttf-61a0d80becf129e5eb10d2864280ff14.fontdata"]
 
 [params]
 

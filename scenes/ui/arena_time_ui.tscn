@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0pdj2du15piq"]
+[gd_scene load_steps=2 format=3 uid="uid://d0pdj2du15piq"]
 
 [ext_resource type="Script" path="res://scenes/ui/arena_time_ui.gd" id="1_otlhu"]
-[ext_resource type="FontFile" uid="uid://bhfq3681dn1g6" path="res://assets/fonts/fusion-pixel-10px-proportional-zh_hans.ttf" id="2_cigs7"]
 
 [node name="ArenaTimeUI" type="CanvasLayer"]
 script = ExtResource("1_otlhu")
@@ -19,6 +18,7 @@ theme_override_constants/margin_top = 8
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource("2_cigs7")
-theme_override_font_sizes/font_size = 20
+theme_override_colors/font_shadow_color = Color(0.247059, 0.14902, 0.192157, 1)
+theme_override_colors/font_outline_color = Color(0.247059, 0.14902, 0.192157, 1)
+theme_override_constants/outline_size = 6
 text = "test"

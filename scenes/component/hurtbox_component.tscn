@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bsgdc2uixlyvy"]
+[gd_scene load_steps=3 format=3 uid="uid://bsgdc2uixlyvy"]
 
 [ext_resource type="Script" path="res://scenes/component/hurtbox_component.gd" id="1_f6yu6"]
+[ext_resource type="PackedScene" uid="uid://ckq3eknnien0c" path="res://scenes/ui/floating_text.tscn" id="2_fmnhl"]
 
 [node name="HurtboxComponent" type="Area2D"]
 collision_layer = 0
 collision_mask = 4
 script = ExtResource("1_f6yu6")
+floating_text_scene = ExtResource("2_fmnhl")
